@@ -63,6 +63,8 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
+            onAnimationStart={() => {}}
+  onAnimationComplete={() => {}}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
         >
           {TOOLS.map((tool, index) => (
@@ -71,8 +73,8 @@ export default function Home() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 + index * 0.1 }}
-              onHoverStart={() => setHoveredCard(tool.id)}
-              onHoverEnd={() => setHoveredCard(null)}
+              onHoverStart={() => setHoveredCard(tool.id) as any }
+              onHoverEnd={() => setHoveredCard(null) as any}
               onClick={() => handleToolClick(tool.id, tool.available)}
               className={`
                 group relative overflow-hidden rounded-2xl p-8 cursor-pointer 

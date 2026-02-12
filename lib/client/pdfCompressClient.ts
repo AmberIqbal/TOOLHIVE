@@ -10,7 +10,7 @@ export async function compressPdfClient(file: File): Promise<File> {
     addDefaultPage: false,
   });
   
-  const compressedBlob = new Blob([pdfBytes], { type: 'application/pdf' });
+  const compressedBlob = new Blob([pdfBytes as unknown as ArrayBuffer], { type: 'application/pdf' });
   const fileName = file.name.replace('.pdf', '_compressed.pdf');
   
   return new File([compressedBlob], fileName, { type: 'application/pdf' });

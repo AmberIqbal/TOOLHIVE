@@ -33,10 +33,12 @@ export default function FileUpload({
   });
 
   return (
-    <div className="w-full">
+    <div  {...getRootProps()} className="w-full">
       <motion.div
-        {...getRootProps()}
+       
         whileHover={{ scale: 1.01 }}
+         onAnimationStart={() => {}}
+  onAnimationComplete={() => {}}
         className={`
           relative border-2 border-dashed rounded-2xl p-12 text-center 
           cursor-pointer transition-all duration-300
@@ -71,6 +73,8 @@ export default function FileUpload({
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
+             onAnimationStart={() => {}}
+  onAnimationComplete={() => {}}
             className="mt-4 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm"
           >
             {fileRejections[0].errors[0].message}
