@@ -140,7 +140,22 @@ export default function BgRemoverTool() {
             )}
 
             {isProcessing ? (
-              <ProcessingLoader message="Removing background..." />
+             <div className="space-y-4">
+  <ProcessingLoader message="Removing background..." />
+  <div className="text-center">
+    <p className="text-yellow-400 font-body text-sm mb-2">
+      ⏱️ Estimated time: {(() => {
+        const fileSizeMB = originalFile.size / (1024 * 1024);
+        if (fileSizeMB > 10) return '60-90 seconds';
+        if (fileSizeMB > 5) return '30-60 seconds';
+        return '20-30 seconds';
+      })()}
+    </p>
+    <p className="text-gray-500 font-body text-xs">
+      Large images take longer. Please wait...
+    </p>
+  </div>
+</div>
             ) : (
               <>
                 <Button onClick={handleRemoveBg}>
