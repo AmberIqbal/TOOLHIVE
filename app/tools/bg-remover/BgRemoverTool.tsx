@@ -39,10 +39,17 @@ export default function BgRemoverTool() {
       const formData = new FormData();
       formData.append('file', originalFile);
 
+      // Create abort controller for timeout
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 120000); // 2 minutes timeout
+
       const response = await fetch(`${API_URL}/remove-bg`, {
         method: 'POST',
         body: formData,
+        signal: controller.signal,
       });
+
+      clearTimeout(timeoutId);
 
       if (!response.ok) {
         throw new Error('Failed to remove background');
@@ -57,7 +64,11 @@ export default function BgRemoverTool() {
       reader.readAsDataURL(file);
 
     } catch (err) {
-      setError('Failed to remove background. Please try a smaller image or check your connection.');
+      if (err instanceof Error && err.name === 'AbortError') {
+        setError('Processing took too long. Please try a smaller image (under 10MB).');
+      } else {
+        setError('Failed to remove background. Please try a smaller image or check your connection.');
+      }
       console.error(err);
     } finally {
       setIsProcessing(false);
