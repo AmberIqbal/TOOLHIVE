@@ -9,7 +9,7 @@ import { downloadFile } from '@/lib/utils/downloadFile';
 import { formatFileSize } from '@/lib/utils/formatFileSize';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const API_URL = 'http://76.13.60.173:8000';
+const API_URL = 'https://toolhive-api.tech';
 
 export default function BgRemoverTool() {
   const [originalFile, setOriginalFile] = useState<File | null>(null);
@@ -19,30 +19,14 @@ export default function BgRemoverTool() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string>('');
 
-  const handleFileSelect = async (file: File) => {
+  const handleFileSelect = (file: File) => {
     setOriginalFile(file);
     setProcessedFile(null);
     setError('');
 
-    // Compress large images before preview (helps mobile)
-    let fileToPreview = file;
-    if (file.size > 5 * 1024 * 1024) { // If larger than 5MB
-      try {
-        const imageCompression = (await import('browser-image-compression')).default;
-        fileToPreview = await imageCompression(file, {
-          maxSizeMB: 5,
-          maxWidthOrHeight: 1920,
-          useWebWorker: true,
-        });
-      } catch (err) {
-        // If compression fails, use original
-        console.warn('Compression failed, using original:', err);
-      }
-    }
-
     const reader = new FileReader();
     reader.onload = (e) => setOriginalPreview(e.target?.result as string);
-    reader.readAsDataURL(fileToPreview);
+    reader.readAsDataURL(file);
   };
 
   const handleRemoveBg = async () => {
@@ -73,17 +57,8 @@ export default function BgRemoverTool() {
       reader.readAsDataURL(file);
 
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Unknown error';
-      
-      if (errorMessage.includes('fetch') || errorMessage.includes('network')) {
-        setError('Network error. Please check your internet connection and try again.');
-      } else if (errorMessage.includes('timeout')) {
-        setError('Upload timed out. Your image might be too large. Try a smaller image.');
-      } else {
-        setError('Failed to remove background. Please try again with a different image.');
-      }
-      
-      console.error('BG removal error:', err);
+      setError('Failed to remove background. Please try a smaller image or check your connection.');
+      console.error(err);
     } finally {
       setIsProcessing(false);
     }
