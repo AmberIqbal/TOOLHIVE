@@ -31,14 +31,14 @@ export const TOOLS: Tool[] = [
     available: true,
     category: 'image',
   },
-  {
+{
     id: 'bg-remover',
     name: 'Background Remover',
     description: 'Remove backgrounds from images instantly with AI precision',
     icon: '🎨',
     badge: 'AI Powered',
     gradient: 'from-purple-500 to-pink-500',
-    available: false,
-    category: 'image'
+    available: true,
+    category: 'image',
   },
 ];

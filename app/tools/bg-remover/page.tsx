@@ -1,4 +1,5 @@
 import ToolLayout from '@/components/ToolLayout';
+import BgRemoverTool from './BgRemoverTool';
 
 export default function BgRemoverPage() {
   return (
@@ -7,21 +8,8 @@ export default function BgRemoverPage() {
       description="AI-powered background removal"
       icon="🎨"
     >
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-12 text-center">
-        <p className="text-4xl mb-4">🔑</p>
-        <p className="text-xl text-white font-display font-bold mb-2">API Key Required</p>
-        <p className="text-gray-400 font-body mb-4">
-          This tool requires a Remove.bg API key.
-        </p>
-        <a 
-          href="https://remove.bg/api" 
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-display font-bold rounded-lg transition-colors"
-        >
-          Get API Key →
-        </a>
-      </div>
+      <BgRemoverTool />
     </ToolLayout>
   );
 }
+
