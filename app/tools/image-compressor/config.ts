@@ -1,5 +1,5 @@
 export const compressorConfig = {
-  maxFileSize: 10 * 1024 * 1024, // 10MB
+  maxFileSize: 20 * 1024 * 1024, 
   acceptedFormats: {
     'image/jpeg': ['.jpg', '.jpeg'],
     'image/png': ['.png'],

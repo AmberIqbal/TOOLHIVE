@@ -1,5 +1,5 @@
 export const resizerConfig = {
-  maxFileSize: 10 * 1024 * 1024,
+  maxFileSize: 20 * 1024 * 1024,
   acceptedFormats: {
     'image/jpeg': ['.jpg', '.jpeg'],
     'image/png': ['.png'],
