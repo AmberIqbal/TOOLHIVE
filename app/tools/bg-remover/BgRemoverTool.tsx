@@ -9,7 +9,7 @@ import { downloadFile } from '@/lib/utils/downloadFile';
 import { formatFileSize } from '@/lib/utils/formatFileSize';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const API_URL = 'http://76.13.60.173:8000';
+const API_URL = 'https://toolhive-api.tech';
 
 export default function BgRemoverTool() {
   const [originalFile, setOriginalFile] = useState<File | null>(null);
