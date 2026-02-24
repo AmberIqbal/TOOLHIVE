@@ -19,9 +19,9 @@ export default function Button({
   className = '' 
 }: ButtonProps) {
   const variants = {
-    primary: 'bg-gradient-to-r from-primary-500 to-pink-500 hover:shadow-primary-500/50',
-    secondary: 'bg-white/10 hover:bg-white/20 border border-white/20',
-    success: 'bg-gradient-to-r from-green-500 to-emerald-500 hover:shadow-green-500/50',
+    primary: 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl',
+    secondary: 'bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 shadow-md hover:shadow-lg',
+    success: 'bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg hover:shadow-xl',
   };
 
   return (
@@ -31,8 +31,8 @@ export default function Button({
       onClick={onClick}
       disabled={disabled}
       className={`
-        w-full py-4 px-8 rounded-xl font-display font-bold text-lg text-white
-        transition-all duration-300 hover:shadow-lg
+        w-full py-4 px-8 rounded-xl font-bold text-lg
+        transition-all duration-300
         disabled:opacity-50 disabled:cursor-not-allowed
         ${variants[variant]}
         ${className}

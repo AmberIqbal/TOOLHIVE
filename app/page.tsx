@@ -13,21 +13,18 @@ export default function Home() {
       id: 'image-compressor',
       name: 'Image Compressor',
       description: 'Reduce file size without losing quality',
-      icon: '⚡',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       id: 'image-resizer',
       name: 'Image Resizer',
       description: 'Resize to any dimension with presets',
-      icon: '📐',
       color: 'from-blue-600 to-indigo-500',
     },
     {
       id: 'format-converter',
       name: 'Format Converter',
       description: 'Convert PNG, JPG, WebP instantly',
-      icon: '🔄',
       color: 'from-indigo-500 to-purple-500',
     },
   ];
@@ -83,9 +80,9 @@ export default function Home() {
               </motion.button>
             </div>
             <div className="flex gap-6 text-sm text-gray-500">
-              <span className="flex items-center gap-2">⚡ Lightning Fast</span>
-              <span className="flex items-center gap-2">🔒 100% Private</span>
-              <span className="flex items-center gap-2">🚀 No Sign-up</span>
+              <span>Lightning Fast</span>
+              <span>100% Private</span>
+              <span>No Sign-up</span>
             </div>
           </motion.div>
 
@@ -99,9 +96,8 @@ export default function Home() {
             <div className="bg-white rounded-2xl shadow-2xl p-8 border border-blue-100">
               <div className="aspect-square bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-6xl mb-4">🎨</div>
-                  <p className="text-gray-600 font-medium">AI Background Removal</p>
-                  <p className="text-sm text-gray-500 mt-2">Upload → Process → Download</p>
+                  <p className="text-gray-600 font-medium text-lg mb-2">AI Background Removal</p>
+                  <p className="text-sm text-gray-500">Upload → Process → Download</p>
                 </div>
               </div>
             </div>
@@ -119,7 +115,6 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <div className="text-6xl mb-4">🎨</div>
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
               AI Background Remover
             </h2>
@@ -130,12 +125,12 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
             {[
-              { icon: '📏', text: 'Supports up to 20MB' },
-              { icon: '🖼️', text: 'PNG, JPG, WebP' },
-              { icon: '⚡', text: 'Instant results' },
-              { icon: '🆓', text: 'No watermarks' },
-              { icon: '✨', text: 'High quality output' },
-              { icon: '🔒', text: 'Privacy first' },
+              { text: 'Supports up to 20MB' },
+              { text: 'PNG, JPG, WebP' },
+              { text: 'Instant results' },
+              { text: 'No watermarks' },
+              { text: 'High quality output' },
+              { text: 'Privacy first' },
             ].map((feature, i) => (
               <motion.div
                 key={i}
@@ -145,7 +140,6 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center"
               >
-                <div className="text-3xl mb-2">{feature.icon}</div>
                 <p className="text-white font-medium">{feature.text}</p>
               </motion.div>
             ))}
@@ -193,7 +187,6 @@ export default function Home() {
               onClick={() => router.push(`/tools/${tool.id}`)}
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all cursor-pointer border-2 border-transparent hover:border-blue-200"
             >
-              <div className="text-6xl mb-4">{tool.icon}</div>
               <h3 className="text-2xl font-bold text-blue-900 mb-3">{tool.name}</h3>
               <p className="text-gray-600 mb-4">{tool.description}</p>
               <motion.div
@@ -222,9 +215,9 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
             {[
-              { icon: '📁', title: 'Upload Your Image', desc: 'Drag and drop or click to browse' },
-              { icon: '🤖', title: 'AI Processes', desc: 'Our AI analyzes and transforms' },
-              { icon: '⬇️', title: 'Download Result', desc: 'Get your processed image instantly' },
+              { title: 'Upload Your Image', desc: 'Drag and drop or click to browse' },
+              { title: 'AI Processes', desc: 'Our AI analyzes and transforms' },
+              { title: 'Download Result', desc: 'Get your processed image instantly' },
             ].map((step, i) => (
               <motion.div
                 key={i}
@@ -234,8 +227,8 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 shadow-lg">
-                  {step.icon}
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-3xl font-black text-white mx-auto mb-6 shadow-lg">
+                  {i + 1}
                 </div>
                 <h3 className="text-xl font-bold text-blue-900 mb-2">{step.title}</h3>
                 <p className="text-gray-600">{step.desc}</p>
@@ -249,10 +242,10 @@ export default function Home() {
       <section id="features" className="container mx-auto px-6 py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {[
-            { icon: '⚡', title: 'Lightning Fast', desc: 'Process images in seconds' },
-            { icon: '🔒', title: 'Privacy First', desc: 'All processing on secure servers' },
-            { icon: '🆓', title: '100% Free Tools', desc: 'No hidden costs' },
-            { icon: '🚀', title: 'No Sign-up', desc: 'Start using immediately' },
+            { title: 'Lightning Fast', desc: 'Process images in seconds' },
+            { title: 'Privacy First', desc: 'All processing on secure servers' },
+            { title: '100% Free Tools', desc: 'No hidden costs' },
+            { title: 'No Sign-up', desc: 'Start using immediately' },
           ].map((feature, i) => (
             <motion.div
               key={i}
@@ -262,7 +255,6 @@ export default function Home() {
               viewport={{ once: true }}
               className="bg-white rounded-xl p-6 shadow-md text-center"
             >
-              <div className="text-4xl mb-3">{feature.icon}</div>
               <h3 className="text-lg font-bold text-blue-900 mb-2">{feature.title}</h3>
               <p className="text-sm text-gray-600">{feature.desc}</p>
             </motion.div>

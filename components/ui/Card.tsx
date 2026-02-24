@@ -11,8 +11,8 @@ interface CardProps {
 export default function Card({ children, className = '', highlight = false }: CardProps) {
   return (
     <div className={`
-      bg-white/5 rounded-2xl p-8 
-      ${highlight ? 'border border-primary-500/30' : 'border border-white/10'}
+      bg-white rounded-2xl p-8 shadow-md
+      ${highlight ? 'ring-2 ring-blue-500 shadow-lg' : 'border border-blue-100'}
       ${className}
     `}>
       {children}

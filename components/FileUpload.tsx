@@ -15,7 +15,7 @@ interface FileUploadProps {
 export default function FileUpload({ 
   onFileSelect, 
   acceptedFormats,
-  maxSize = 10 * 1024 * 1024,
+  maxSize = 20 * 1024 * 1024,
   icon = '📁',
   multiple = false,
 }: FileUploadProps) {
@@ -33,18 +33,16 @@ export default function FileUpload({
   });
 
   return (
-    <div  {...getRootProps()} className="w-full">
-      <motion.div
-       
-        whileHover={{ scale: 1.01 }}
-         onAnimationStart={() => {}}
-  onAnimationComplete={() => {}}
+    <div className="w-full">
+      <div
+        {...getRootProps()}
         className={`
-          relative border-2 border-dashed rounded-2xl p-12 text-center 
-          cursor-pointer transition-all duration-300
+          relative border-2 border-dashed rounded-2xl p-16 text-center 
+          cursor-pointer transition-all duration-300 bg-white
+          hover:scale-[1.01]
           ${isDragActive 
-            ? 'border-primary-500 bg-primary-500/10' 
-            : 'border-white/20 bg-white/5 hover:border-primary-500/50 hover:bg-white/10'
+            ? 'border-blue-500 bg-blue-50 shadow-lg' 
+            : 'border-blue-300 hover:border-blue-400 hover:bg-blue-50/50 shadow-md'
           }
         `}
       >
@@ -57,15 +55,15 @@ export default function FileUpload({
           {icon}
         </motion.div>
         
-        <h3 className="text-2xl font-display font-bold text-white mb-2">
+        <h3 className="text-2xl font-bold text-blue-900 mb-2">
           {isDragActive ? 'Drop it here!' : 'Drop your file here'}
         </h3>
         
-        <p className="text-gray-400 font-body mb-4">
+        <p className="text-gray-600 mb-4">
           or click to browse from your computer
         </p>
 
-        <div className="text-sm text-gray-500 font-body">
+        <div className="text-sm text-gray-500">
           Max file size: {(maxSize / (1024 * 1024)).toFixed(0)}MB
         </div>
 
@@ -73,14 +71,12 @@ export default function FileUpload({
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-             onAnimationStart={() => {}}
-  onAnimationComplete={() => {}}
-            className="mt-4 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm"
+            className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-600 text-sm font-medium"
           >
             {fileRejections[0].errors[0].message}
           </motion.div>
         )}
-      </motion.div>
+      </div>
     </div>
   );
 }
