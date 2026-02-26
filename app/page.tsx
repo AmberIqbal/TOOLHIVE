@@ -74,6 +74,10 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                 onClick={() => {
+                  const toolsSection = document.getElementById('tools');
+                  toolsSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="px-8 py-4 border-2 border-blue-600 text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition"
               >
                 View All Tools
