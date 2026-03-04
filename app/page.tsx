@@ -36,7 +36,7 @@ export default function Home() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="text-3xl"></span>
-            <span className="text-2xl font-bold text-blue-900">ToolHive</span>
+            <span className="text-2xl font-bold text-blue-900">ImgToolSet</span>
           </div>
           <div className="hidden md:flex gap-8 text-gray-600 font-medium">
             <a href="#tools" className="hover:text-blue-600 transition">Tools</a>
@@ -123,7 +123,7 @@ export default function Home() {
               AI Background Remover
             </h2>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Remove backgrounds from any image in seconds. Powered by U2Net AI model.
+              Remove backgrounds from any image in seconds. 
             </p>
           </motion.div>
 
@@ -278,7 +278,7 @@ export default function Home() {
               Start Creating Amazing Visuals Today
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join thousands using ToolHive to transform their images
+              Join thousands using ImgToolSet to transform their images
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -298,7 +298,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-2">
               <span className="text-2xl"></span>
-              <span className="text-white font-bold">ToolHive</span>
+              <span className="text-white font-bold">ImgToolSet</span>
               <span className="text-sm">© 2026</span>
             </div>
             <div className="flex gap-8 text-sm">
