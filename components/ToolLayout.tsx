@@ -19,7 +19,7 @@ export default function ToolLayout({ title, description, icon, children }: ToolL
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition">
-              <span className="text-2xl">🐝</span>
+              <span className="text-2xl"></span>
               <span className="text-xl font-bold text-blue-900">ToolHive</span>
             </Link>
             <Link 

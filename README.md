@@ -1,4 +1,4 @@
-# 🐝 ToolHive - All-in-One Creative Tools
+# ImgToolset - All-in-One Creative Tools
 
 A modern, high-performance Next.js 14 application providing essential creative tools for digital creators. Built with TypeScript, Tailwind CSS, and Framer Motion.
 

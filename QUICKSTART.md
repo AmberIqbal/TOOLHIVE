@@ -1,6 +1,6 @@
 # 🚀 Quick Start Guide
 
-Get ToolHive running in 5 minutes!
+Get ImgToolset running in 5 minutes!
 
 ## Step 1: Install Dependencies
 
@@ -20,7 +20,7 @@ npm run dev
 
 Navigate to: **http://localhost:3000**
 
-You should see the ToolHive landing page! 🎉
+You should see the ImgToolset landing page! 🎉
 
 ## What's Working Right Now
 

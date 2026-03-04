@@ -5,10 +5,10 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://toolhive-ruby.vercel.app'),
+  metadataBase: new URL('https://imgtoolset.com'),
   title: {
-    default: 'ToolHive - Free AI Image Tools | Background Remover & More',
-    template: '%s | ToolHive',
+    default: 'ImgToolset- Free AI Image Tools | Background Remover & More',
+    template: '%s | ImgToolset',
   },
   description: 'Free online image tools powered by AI. Remove backgrounds, compress images, resize photos, and convert formats. No signup required, no watermarks.',
   keywords: [
@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     'resize photos',
     'free image editor',
     'no watermark',
-    'toolhive'
+    'ImgToolset'
   ],
-  authors: [{ name: 'ToolHive' }],
-  creator: 'ToolHive',
-  publisher: 'ToolHive',
+  authors: [{ name: 'ImgToolset' }],
+  creator: 'ImgToolset',
+  publisher: 'ImgToolset',
   formatDetection: {
     email: false,
     address: false,
@@ -36,14 +36,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://toolhive-ruby.vercel.app',
-    title: 'ToolHive - Free AI Image Tools',
+    url: 'https://imgtoolset.com',
+    title: 'ImgToolset - Free AI Image Tools',
     description: 'Remove backgrounds with AI, compress images, resize photos, convert formats. No signup, no watermarks.',
-    siteName: 'ToolHive',
+    siteName: 'ImgToolset',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ToolHive - Free AI Image Tools',
+    title: 'ImgToolset - Free AI Image Tools',
     description: 'Remove backgrounds, compress & resize images for free. No signup required.',
   },
   robots: {
@@ -72,7 +72,7 @@ export default function RootLayout({
         
         {/* Additional SEO tags */}
         <meta name="theme-color" content="#3b82f6" />
-        <link rel="canonical" href="https://toolhive-ruby.vercel.app" />
+        <link rel="canonical" href="https://imgtoolset.com" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

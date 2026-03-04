@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://toolhive-ruby.vercel.app/sitemap.xml',
+    sitemap: 'https://imgtoolset.com/sitemap.xml',
   };
 }

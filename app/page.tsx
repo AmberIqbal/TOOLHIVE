@@ -35,7 +35,7 @@ export default function Home() {
       <nav className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-3xl">🐝</span>
+            <span className="text-3xl"></span>
             <span className="text-2xl font-bold text-blue-900">ToolHive</span>
           </div>
           <div className="hidden md:flex gap-8 text-gray-600 font-medium">
@@ -297,7 +297,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-2">
-              <span className="text-2xl">🐝</span>
+              <span className="text-2xl"></span>
               <span className="text-white font-bold">ToolHive</span>
               <span className="text-sm">© 2026</span>
             </div>
