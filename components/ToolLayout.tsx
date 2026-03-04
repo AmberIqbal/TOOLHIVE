@@ -20,7 +20,7 @@ export default function ToolLayout({ title, description, icon, children }: ToolL
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition">
               <span className="text-2xl"></span>
-              <span className="text-xl font-bold text-blue-900">ToolHive</span>
+              <span className="text-xl font-bold text-blue-900">ImgToolSet"</span>
             </Link>
             <Link 
               href="/"
