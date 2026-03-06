@@ -73,6 +73,21 @@ export default function RootLayout({
         {/* Additional SEO tags */}
         <meta name="theme-color" content="#3b82f6" />
         <link rel="canonical" href="https://imgtoolset.com" />
+
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-BX82221VDM"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-BX82221VDM');
+            `,
+          }}
+        />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
