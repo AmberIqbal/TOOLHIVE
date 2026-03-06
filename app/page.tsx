@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-
+import Link from 'next/link';
 export default function Home() {
   const router = useRouter();
   const [hoveredTool, setHoveredTool] = useState<string | null>(null);
@@ -302,8 +302,8 @@ export default function Home() {
               <span className="text-sm">© 2026</span>
             </div>
             <div className="flex gap-8 text-sm">
-              <a href="#" className="hover:text-white transition">Privacy</a>
-              <a href="#" className="hover:text-white transition">Terms</a>
+               <Link href="/privacy" className="hover:text-white transition">Privacy</Link>
+  <Link href="/terms" className="hover:text-white transition">Terms</Link>
               
             </div>
           </div>
