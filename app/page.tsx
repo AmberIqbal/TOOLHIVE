@@ -302,9 +302,9 @@ export default function Home() {
               <span className="text-sm">© 2026</span>
             </div>
             <div className="flex gap-8 text-sm">
-               <Link href="/privacy" className="hover:text-white transition">Privacy</Link>
+               <Link href="/Privacy" className="hover:text-white transition">Privacy</Link>
   
-              <Link href="/terms" className="hover:text-white transition">Terms</Link>
+              <Link href="/Terms" className="hover:text-white transition">Terms</Link>
               
             </div>
           </div>
