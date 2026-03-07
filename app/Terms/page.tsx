@@ -190,7 +190,7 @@ export default function TermsPage() {
     If you have any questions about this Privacy Policy, please contact us at:
   </p>
   <p className="text-gray-700">
-    <strong>Email:</strong> <a href="mailto:imagetoolset@gmail.com" className="text-blue-600 underline">imgtoolset@gmail.com</a>
+    <strong>Email:</strong><a href="mailto:imagetoolset@gmail.com" className="text-blue-600 underline">imagetoolset@gmail.com</a>
   </p>
 </div>
         </div>
