@@ -167,14 +167,14 @@ export default function PrivacyPage() {
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-md">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">Contact Us</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              If you have any questions about this Privacy Policy, please contact us at:
-            </p>
-            <p className="text-gray-700">
-              <strong>Website:</strong> <a href="https://imgtoolset.com" className="text-blue-600 underline">imgtoolset.com</a>
-            </p>
-          </div>
+  <h2 className="text-2xl font-bold text-blue-900 mb-4">Contact Us</h2>
+  <p className="text-gray-700 leading-relaxed mb-4">
+    If you have any questions about this Privacy Policy, please contact us at:
+  </p>
+  <p className="text-gray-700">
+    <strong>Email:</strong> <a href="mailto:imagetoolset@gmail.com" className="text-blue-600 underline">imgtoolset@gmail.com</a>
+  </p>
+</div>
         </div>
       </div>
     </div>
