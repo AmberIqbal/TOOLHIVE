@@ -68,7 +68,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes='any' />
         
         {/* Additional SEO tags */}
         <meta name="theme-color" content="#3b82f6" />
