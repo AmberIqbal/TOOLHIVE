@@ -24,7 +24,10 @@ export const metadata: Metadata = {
     'free image editor',
     'no watermark',
     'ImgToolset'
-  ],
+  ], 
+   icons: {
+    icon: '/favicon.ico',
+  },
   authors: [{ name: 'ImgToolset' }],
   creator: 'ImgToolset',
   publisher: 'ImgToolset',
