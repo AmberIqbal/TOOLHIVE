@@ -60,6 +60,7 @@ export const metadata: Metadata = {
   verification: {
     google: "aPYJHFPRe1PZFsuy0qb30Yvuxiz8H0hrQolKgKory3U" , // Add after Google Search Console
   },
+  
 };
 
 export default function RootLayout({
@@ -76,7 +77,7 @@ export default function RootLayout({
         {/* Additional SEO tags */}
         <meta name="theme-color" content="#3b82f6" />
         <link rel="canonical" href="https://imgtoolset.com" />
-
+<meta name="p:domain_verify" content="ea7375104f5e8b47c605af34e83eb584"/>
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-BX82221VDM"
