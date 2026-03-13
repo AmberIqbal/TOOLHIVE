@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getPostBySlug, getAllPosts } from '@/lib/blog';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export async function generateStaticParams() {
   const posts = await getAllPosts();
@@ -79,6 +80,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         <div className="prose prose-lg prose-blue max-w-none">
           <div className="bg-white rounded-2xl p-8 shadow-md">
             <ReactMarkdown
+             remarkPlugins={[remarkGfm]}
               components={{
                 h1: ({children}) => <h1 className="text-4xl font-bold text-blue-900 mb-6 mt-8">{children}</h1>,
                 h2: ({children}) => <h2 className="text-3xl font-bold text-blue-900 mb-4 mt-8">{children}</h2>,
@@ -89,6 +91,15 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                 a: ({children, href}) => <a href={href} className="text-blue-600 underline hover:text-blue-700">{children}</a>,
                 strong: ({children}) => <strong className="font-bold text-gray-900">{children}</strong>,
                 code: ({children}) => <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono">{children}</code>,
+              table: ({children}) => <div className="overflow-x-auto mb-6"><table className="w-full border-collapse border border-gray-200 rounded-lg">{children}</table></div>,
+    thead: ({children}) => <thead className="bg-blue-50">{children}</thead>,
+    tbody: ({children}) => <tbody>{children}</tbody>,
+    tr: ({children}) => <tr className="border-b border-gray-200 hover:bg-gray-50">{children}</tr>,
+    th: ({children}) => <th className="px-4 py-3 text-left font-bold text-blue-900 border border-gray-200">{children}</th>,
+    td: ({children}) => <td className="px-4 py-3 text-gray-700 border border-gray-200">{children}</td>,
+  
+              
+              
               }}
             >
               {post.content}

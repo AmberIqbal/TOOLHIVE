@@ -40,6 +40,7 @@ export default function Home() {
           </div>
           <div className="hidden md:flex gap-8 text-gray-600 font-medium">
             <a href="#tools" className="hover:text-blue-600 transition">Tools</a>
+            <Link href="/blog"  className="hover:text-blue-600 transition">Blog</Link>
             <a href="#features" className="hover:text-blue-600 transition">Features</a>
             
           </div>
@@ -305,7 +306,7 @@ export default function Home() {
                <Link href="/Privacy" className="hover:text-white transition">Privacy</Link>
   
               <Link href="/Terms" className="hover:text-white transition">Terms</Link>
-              <Link href="/blog"  className="hover:text-white transition">Blog</Link>
+              
               
             </div>
           </div>
